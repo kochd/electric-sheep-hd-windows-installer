@@ -7,3 +7,5 @@ Building progress:
 * Install Innosetup 5 (latest: http://www.jrsoftware.org/download.php/is.exe)
 * Run build.cmd
 * Get the setup form the Output folder
+* Create the same tag here and for [electricsheep-hd-client](https://github.com/kochd/electricsheep-hd-client) so that we know which installer builded which release.
+* Attache the installer to the [electricsheep-hd-client](https://github.com/kochd/electricsheep-hd-client) release
