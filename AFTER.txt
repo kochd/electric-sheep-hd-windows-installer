@@ -1,0 +1,4 @@
+Installation complete.
+
+Run the daemon to enter your Apikey and render some frames.
+After a while you will download sequences you can play using the "play" application.
