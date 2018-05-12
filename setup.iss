@@ -6,7 +6,12 @@
 #define MyAppPublisher "Electric Sheep HD"
 #define MyAppURL "https://sheeps.triple6.org"
 #define GitDir "electricsheep-hd-client-master"
-#define BlobDir "git+flam3+ruby"
+#define ContribDir "contrib"
+#define Ruby "include\ruby"
+#define Flam3 "include\flam3"
+#define MPV "include\mpv"
+#define Which "include\which"
+
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
@@ -40,7 +45,10 @@ Name: "{app}"; Permissions: users-full
 
 [Files]
 Source: "{#GitDir}\*"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BlobDir}\*"; DestDir: "{app}\{#BlobDir}\"; Flags: ignoreversion recursesubdirs
+Source: "{#Ruby}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
+Source: "{#Flam3}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
+Source: "{#MPV}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
+Source: "{#Which}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
 
 [Icons]
 Name: "{group}\daemon"; Filename: "{app}\daemon_windows.cmd"; IconFilename: "{app}\logo.ico"
