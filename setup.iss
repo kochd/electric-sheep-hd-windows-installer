@@ -56,3 +56,5 @@ Name: "{group}\play"; Filename: "{app}\play_windows.cmd"; IconFilename: "{app}\l
 Name: "{group}\{cm:ProgramOnTheWeb,{#MyAppName}}"; Filename: "{#MyAppURL}"
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 
+[Registry]
+Root: HKLM32; Subkey: "Software\{#MyAppname}\Settings"; ValueType: string; ValueName: "InstallPath"; ValueData: "{app}"
