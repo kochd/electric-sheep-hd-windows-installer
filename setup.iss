@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Electric Sheep HD"
-#define MyAppVersion "20180512"
+#define MyAppVersion "20180525"
 #define MyAppPublisher "Electric Sheep HD"
 #define MyAppURL "https://sheeps.triple6.org"
 #define GitDir "electricsheep-hd-client-master"
@@ -52,6 +52,7 @@ Source: "{#Which}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recur
 
 [Icons]
 Name: "{group}\daemon"; Filename: "{app}\daemon_windows.cmd"; IconFilename: "{app}\logo.ico"
+Name: "{group}\daemon (GPU)"; Filename: "{app}\daemon_windows.cmd"; IconFilename: "{app}\logo.ico"; Parameters: "--gpu"
 Name: "{group}\play"; Filename: "{app}\play_windows.cmd"; IconFilename: "{app}\logo.ico"
 Name: "{group}\{cm:ProgramOnTheWeb,{#MyAppName}}"; Filename: "{#MyAppURL}"
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
