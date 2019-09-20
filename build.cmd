@@ -10,11 +10,14 @@ copy electricsheep-hd-client-master\Gemfile %TMP%
 cd %TMP%
 cmd /C bundler install
 cmd /C bundler update
+cmd /C gem cleanup
+
 cd %BASEDIR%
 
 @REM Delete ruby doc
 del /s /q include\ruby\share\doc > NUL
 rmdir /s /q include\ruby\share\doc > NUL
+del /s /q include\ruby\lib\ruby\gems\*.ri > NUL
 
 @REM Copy LICENSE
 copy electricsheep-hd-client-master\LICENSE LICENSE.txt

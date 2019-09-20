@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Electric Sheep HD"
-#define MyAppVersion "20180525"
+#define MyAppVersion "20190921"
 #define MyAppPublisher "Electric Sheep HD"
 #define MyAppURL "https://sheeps.triple6.org"
 #define GitDir "electricsheep-hd-client-master"
@@ -11,6 +11,7 @@
 #define Flam3 "include\flam3"
 #define MPV "include\mpv"
 #define Which "include\which"
+#define Screensaver "include\screensaver"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -32,7 +33,7 @@ InfoBeforeFile=BEFORE.txt
 InfoAfterFile=AFTER.txt
 OutputBaseFilename=Electric Sheep HD Installer
 SetupIconFile={#GitDir}\logo.ico
-Compression=lzma2
+Compression=lzma2/ultra
 SolidCompression=yes
 ;WizardImageFile={#GitDir}\logo.bmp
 WizardSmallImageFile={#GitDir}\logo.bmp
@@ -49,6 +50,8 @@ Source: "{#Ruby}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recurs
 Source: "{#Flam3}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
 Source: "{#MPV}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
 Source: "{#Which}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
+Source: "{#Screensaver}\mpv-1.dll"; DestDir: "{win}\System32\" ; Flags: 64bit ignoreversion recursesubdirs
+Source: "{#Screensaver}\Electric Sheep HD.scr"; DestDir: "{win}\System32\" ; Flags: 64bit ignoreversion recursesubdirs
 
 [Icons]
 Name: "{group}\daemon"; Filename: "{app}\daemon_windows.cmd"; IconFilename: "{app}\logo.ico"
