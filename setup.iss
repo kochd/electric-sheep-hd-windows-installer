@@ -59,3 +59,4 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 
 [Registry]
 Root: HKLM32; Subkey: "Software\{#MyAppname}\Settings"; ValueType: string; ValueName: "InstallPath"; ValueData: "{app}"
+Root: HKLM64; Subkey: "Software\{#MyAppname}\Settings"; ValueType: string; ValueName: "InstallPath"; ValueData: "{app}"
