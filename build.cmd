@@ -24,7 +24,7 @@ copy electricsheep-hd-client-master\LICENSE LICENSE.txt
 
 @REM Build setup.exe
 cd %BASEDIR%
-"%ProgramFiles(x86)%\Inno Setup 5\Compil32.exe" /cc setup.iss
+"%ProgramFiles(x86)%\Inno Setup 6\Compil32.exe" /cc setup.iss
 
 echo Build complete
 pause
