@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Electric Sheep HD"
-#define MyAppVersion "20190921"
+#define MyAppVersion "20190923"
 #define MyAppPublisher "Electric Sheep HD"
 #define MyAppURL "https://sheeps.triple6.org"
 #define GitDir "electricsheep-hd-client-master"
