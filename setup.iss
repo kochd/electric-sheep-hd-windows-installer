@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Electric Sheep HD"
-#define MyAppVersion "20190923"
+#define MyAppVersion "20200622"
 #define MyAppPublisher "Electric Sheep HD"
 #define MyAppURL "https://sheeps.triple6.org"
 #define GitDir "electricsheep-hd-client-master"
@@ -46,6 +46,7 @@ Name: "{app}"; Permissions: users-full
 
 [Files]
 Source: "{#GitDir}\*"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#GitDir}\lib\*"; DestDir: "{app}\lib"; Flags: ignoreversion
 Source: "{#Ruby}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
 Source: "{#Flam3}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
 Source: "{#MPV}\*"; DestDir: "{app}\{#ContribDir}"; Flags: ignoreversion recursesubdirs
